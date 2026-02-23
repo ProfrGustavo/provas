@@ -5,155 +5,186 @@
 <title>Prova de Progressão 8º Ano</title>
 
 <style>
-
-@page{
-    size: A4;
-    margin: 2cm;
-}
-
 body{
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: white;
+    margin: 40px;
+    background-color: #f4f6f9;
 }
-
-.pagina{
-    width: 100%;
-    page-break-after: always;
-}
-
-.pagina:last-child{
-    page-break-after: auto;
-}
-
-/* Cabeçalho institucional */
 
 .cabecalho-colegio{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
-    border-bottom: 2px solid #000;
-    padding-bottom: 10px;
     margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
 }
 
 .logo-colegio{
     width: 80px;
+    height: auto;
 }
 
 .nome-colegio{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.prova{
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 h2{
     text-align: center;
-    margin: 10px 0;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+hr{
+    margin: 20px 0;
 }
 
 .questao{
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.alternativas{
+    margin-top: 8px;
 }
 
 .alternativas label{
     display: block;
-    margin: 4px 0;
+    margin-bottom: 5px;
 }
 
 img{
-    max-width: 250px;
+    max-width: 300px;
+    display: block;
     margin: 10px 0;
+    border: 1px solid #ccc;
 }
 
 .linha{
     border-bottom: 1px solid #000;
-    margin: 12px 0;
+    margin: 15px 0;
 }
 
+@media print {
+    body{
+        background: white;
+    }
+    .prova{
+        box-shadow: none;
+    }
+}
+
+
 .espaco-desenho{
-    height: 200px;
-    border: 1px solid #000;
+    height: 180px;
+    border: 1px solid #ccc;
     margin-top: 10px;
 }
 
-h3{
-    margin-top: 20px;
-    border-bottom: 1px solid #000;
-    padding-bottom: 5px;
-}
 
 </style>
-</head>
 
+</head>
 <body>
 
-<!-- ================= PÁGINA 1 ================= -->
+<div class="prova">
 
-<div class="pagina">
-
-<div class="cabecalho-colegio">
-    <img src="logo.jpg" class="logo-colegio">
+    <div class="cabecalho-colegio">
+    <img src="logo.jpg" alt="Logo do Colégio" class="logo-colegio">
     <div class="nome-colegio">
         COLÉGIO ESTADUAL ROCHA POMBO - ENSINO FUNDAMENTAL, MÉDIO, NORMAL E PROFISSIONAL
     </div>
 </div>
 
-<h2>Prova de Progressão 8º Ano - Matemática</h2>
-<p><strong>Professor:</strong> Gustavo de Medeiros</p>
+<h2>Professor: Gustavo de Medeiros</h2>
 
 <hr>
 
-<p><strong>Nome:</strong> ________________________________________________</p>
+<p><strong>Nome:</strong> _____________________________________________</p>
 <p><strong>Data:</strong> ____/____/______</p>
+
+<hr>
 
 <h3>Parte 1 – Múltipla Escolha</h3>
 
 <div class="questao">
 <p><strong>1)</strong> Um produto custa R$ 200,00 e teve desconto de 10%. Qual é o valor do desconto?</p>
-<img src="problmea.jpeg">
-<label>A) R$ 10</label>
-<label>B) R$ 20</label>
-<label>C) R$ 30</label>
-<label>D) R$ 40</label>
+<div class="alternativas">
+    <img src="problmea.jpeg" alt="Imagem ilustrativa de paralelepípedo">
+<label><input type="radio" name="q1"> A) R$ 10</label>
+<label><input type="radio" name="q1"> B) R$ 20</label>
+<label><input type="radio" name="q1"> C) R$ 30</label>
+<label><input type="radio" name="q1"> D) R$ 40</label>
+<div class="linha"></div>
+<div class="linha"></div>
+<div class="linha"></div>
+<div class="linha"></div>
+</div>
 </div>
 
 <div class="questao">
 <p><strong>2)</strong> Calcule: 3² + √16</p>
-<label>A) 9</label>
-<label>B) 12</label>
-<label>C) 13</label>
-<label>D) 15</label>
+<div class="alternativas">
+<label><input type="radio" name="q2"> A) 9</label>
+<label><input type="radio" name="q2"> B) 12</label>
+<label><input type="radio" name="q2"> C) 13</label>
+<label><input type="radio" name="q2"> D) 15</label>
+<div class="linha"></div>
+<div class="linha"></div>
+<div class="linha"></div>
+<div class="linha"></div>
+</div>
 </div>
 
 <div class="questao">
 <p><strong>3)</strong> Resolva: 3x - 5 = 16</p>
-<label>A) 5</label>
-<label>B) 6</label>
-<label>C) 7</label>
-<label>D) 8</label>
+<div class="alternativas">
+<label><input type="radio" name="q3"> A) 5</label>
+<label><input type="radio" name="q3"> B) 6</label>
+<label><input type="radio" name="q3"> C) 7</label>
+<label><input type="radio" name="q3"> D) 8</label>
+<div class="linha"></div>
+<div class="linha"></div>
+</div>
 </div>
 
 <div class="questao">
-<p><strong>4)</strong> Observe a imagem abaixo:</p>
-<img src="bolas.png">
+<p><strong>4)</strong> Observe a imagem abaixo e responda justificando com calculos:</p>
+
+<img src="bolas.png" alt="Imagem">
+
 <p>Em uma caixa há 3 bolas azuis, 2 vermelhas e 5 verdes. Qual a probabilidade de retirar uma bola vermelha?</p>
-<label>A) 1/10</label>
-<label>B) 1/5</label>
-<label>C) 2/10</label>
-<label>D) 3/10</label>
+
+<div class="alternativas">
+<label><input type="radio" name="q4"> A) 1/10</label>
+<label><input type="radio" name="q4"> B) 1/5</label>
+<label><input type="radio" name="q4"> C) 2/10</label>
+<label><input type="radio" name="q4"> D) 3/10</label>
+</div>
 </div>
 
-</div>
-
-<!-- ================= PÁGINA 2 ================= -->
-
-<div class="pagina">
+<hr>
 
 <h3>Parte 2 – Desenho</h3>
 
 <div class="questao">
 <p><strong>5)</strong> Desenhe duas retas que formem um ângulo de 90°.</p>
-<div class="espaco-desenho"></div>
+<div style="height: 150px;"></div>
 </div>
 
 <div class="questao">
@@ -166,11 +197,7 @@ h3{
 <div class="espaco-desenho"></div>
 </div>
 
-</div>
-
-<!-- ================= PÁGINA 3 ================= -->
-
-<div class="pagina">
+<hr>
 
 <h3>Parte 3 – Descritivas</h3>
 
@@ -189,14 +216,16 @@ h3{
 </div>
 
 <div class="questao">
-<p><strong>10)</strong> Observe a imagem abaixo:</p>
-<img src="caixa.png">
+<p><strong>10)</strong> Observe a imagem abaixo e resolva:</p>
+
+<img src="caixa.png" alt="Imagem ilustrativa de paralelepípedo">
+
 <p>Uma caixa tem 4 m de comprimento, 3 m de largura e 2 m de altura.</p>
 <p>a) Calcule o volume.</p>
 <div class="linha"></div>
 <div class="linha"></div>
 <p>b) Se dobrarmos a altura, qual será o novo volume?</p>
-<div class="linha"></div>
+
 <div class="linha"></div>
 </div>
 
