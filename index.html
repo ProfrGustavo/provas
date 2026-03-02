@@ -2,13 +2,13 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Prova - Análise Combinatória</title>
+<title>Prova - Operações com Decimais, Frações e Potências</title>
 
 <style>
 
 @page{
     size: A4;
-    margin: 1cm;
+    margin: 1.2cm;
 }
 
 body{
@@ -29,33 +29,115 @@ body{
     display: flex;
     align-items: center;
     gap: 15px;
-    border-bottom: 1px solid #000;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 .logo{
-    width: 60px;
+    width: 65px;
 }
 
 .nome-colegio{
-    font-size: 11pt;
+    font-size: 12pt;
     font-weight: bold;
 }
 
 h2{
     text-align: center;
-    margin: 5px 0;
-    font-size: 12pt;
+    margin: 10px 0;
+    font-size: 16pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .questao{
+    margin-bottom: 20px;
+}
+
+.subquestao{
+    margin-left: 25px;
+    margin-top: 8px;
+    line-height: 1.8;
+}
+
+.espaco-resposta{
+    margin-top: 3px;
+    border-bottom: 2px dotted #666;
+    width: 150px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.fracao {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 5px;
+    font-size: 1.1em;
+}
+
+.fracao .numerador {
+    display: block;
+    border-bottom: 2px solid black;
+    padding: 0 5px;
+    line-height: 1.4;
+}
+
+.fracao .denominador {
+    display: block;
+    padding: 0 5px;
+    line-height: 1.4;
+}
+
+.potencia {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.potencia .base {
+    display: inline-block;
+    font-size: 1.1em;
+}
+
+.potencia .expoente {
+    display: inline-block;
+    font-size: 0.8em;
+    vertical-align: super;
+    margin-left: 2px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px 0 5px 0;
+    width: 100%;
+}
+
+td {
+    padding: 8px 5px;
+    border: none;
+    font-size: 12pt;
+}
+
+.linha-itens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.item-potencia {
+    width: 30%;
     margin-bottom: 10px;
 }
 
-.linha-corte{
-    border-top: 2px dashed #000;
-    margin: 15px 0;
+.destaque {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.problema {
+    margin-bottom: 20px;
 }
 
 </style>
@@ -65,78 +147,92 @@ h2{
 
 <div class="folha">
 
-<!-- ================= PROVA 1 ================= -->
-
 <div class="prova">
 
 <div class="cabecalho">
-    <img src="logo.jpg" class="logo">
+    <img src="logo.jpg" class="logo" alt="Logo">
     <div class="nome-colegio">
-        COLÉGIO ESTADUAL ROCHA POMBO - ENSINO FUNDAMENTAL, MÉDIO, NORMAL E PROFISSIONAL
+        COLÉGIO ESTADUAL ROCHA POMBO<br>
+        ENSINO FUNDAMENTAL, MÉDIO, NORMAL E PROFISSIONAL
     </div>
 </div>
 
-<h2>Prova – Análise Combinatória</h2>
-<p><strong>Professor:</strong> Gustavo de Medeiros</p>
-<p><strong>Nome:</strong> ______________________________________</p>
+<h2>Prova – Operações com Decimais, Frações e Potências</h2>
 
+<div style="display: flex; justify-content: space-between; margin: 15px 0 20px 0; font-size: 12pt;">
+    <span><strong>Professor:</strong> Gustavo de Medeiros</span>
+    <span><strong>Data:</strong> ___/___/_______</span>
+</div>
+
+<p style="margin: 5px 0 20px 0; font-size: 12pt;"><strong>Nome:</strong> _________________________________________________________ <strong>Turma:</strong> _______</p>
+
+<!-- QUESTÃO 1 - DECIMAIS -->
 <div class="questao">
-1) Determine o número de permutações simples da palavra PROVA.
-</div>
-
-<div class="questao">
-2) Determine o número de permutações da palavra MATEMATICA. Justifique por que a palavra está escrita sem acento.
-</div>
-
-<div class="questao">
-3) Um pódio de verncedores será formado com 3 alunos entre 18 candidatos. De quantas maneiras diferentes isso pode ocorrer? 
-</div>
-
-<div class="questao">
-4) Uma comissão de jurados com 3 alunos será formada a partir de 20 estudantes. De quantas maneiras diferentes pode ser formada?
-</div>
-
-<div class="questao">
-5) Lança-se um dado e retira-se simultaneamente uma carta de um baralho de 52 cartas. Qual a probabilidade de a soma dos valores obtidos ser um número par?
-</div>
-
-</div>
-
-<div class="linha-corte"></div>
-
-<!-- ================= PROVA 2 ================= -->
-
-<div class="prova">
-
-<div class="cabecalho">
-    <img src="logo.jpg" class="logo">
-    <div class="nome-colegio">
-        COLÉGIO ESTADUAL ROCHA POMBO - ENSINO FUNDAMENTAL, MÉDIO, NORMAL E PROFISSIONAL
+    <div class="destaque">1) Resolva as operações com números decimais:</div>
+    <div class="subquestao">
+        a) 123,45 + 76,89 = <span class="espaco-resposta"></span><br>
+        b) 458,30 - 129,76 = <span class="espaco-resposta"></span><br>
+        c) 23,4 × 5,8 = <span class="espaco-resposta"></span><br>
+        d) 156,8 ÷ 4 = <span class="espaco-resposta"></span><br>
     </div>
 </div>
 
-<h2>Prova – Análise Combinatória</h2>
-<p><strong>Professor:</strong> Gustavo de Medeiros</p>
-<p><strong>Nome:</strong> ______________________________________</p>
-
+<!-- QUESTÃO 2 - FRAÇÕES BÁSICAS -->
 <div class="questao">
-1) Determine o número de permutações simples da palavra PROVA.
+    <div class="destaque">2) Resolva as operações com frações:</div>
+    <div class="subquestao">
+        a) <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> + <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> = <span class="espaco-resposta"></span><br>
+        b) <span class="fracao"><span class="numerador">7</span><span class="denominador">8</span></span> - <span class="fracao"><span class="numerador">2</span><span class="denominador">3</span></span> = <span class="espaco-resposta"></span><br>
+        c) <span class="fracao"><span class="numerador">3</span><span class="denominador">7</span></span> × <span class="fracao"><span class="numerador">5</span><span class="denominador">6</span></span> = <span class="espaco-resposta"></span><br>
+        d) <span class="fracao"><span class="numerador">4</span><span class="denominador">9</span></span> ÷ <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> = <span class="espaco-resposta"></span>
+    </div>
 </div>
 
+<!-- QUESTÃO 3 - POTÊNCIAS COM NÚMEROS INTEIROS -->
 <div class="questao">
-2) Determine o número de permutações da palavra MATEMATICA. Justifique por que a palavra está escrita sem acento.
+    <div class="destaque">3) Calcule as potências (números inteiros):</div>
+    <div class="subquestao">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+            <div>a) 2³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+            <div>b) 5³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+            <div>c) 3⁴ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+            <div>d) 10⁴ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+            <div>e) 7³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+            <div>f) 6⁴ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+        </div>
+    </div>
 </div>
 
+<!-- QUESTÃO 4 - POTÊNCIAS COM NÚMEROS DECIMAIS -->
 <div class="questao">
-3) Um pódio de verncedores será formado com 3 alunos entre 18 candidatos. De quantas maneiras diferentes isso pode ocorrer? 
+    <div class="destaque">4) Calcule as potências (números decimais):</div>
+    <div class="subquestao">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+            <div>a) 0,5³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+            <div>b) 1,2² = <span class="espaco-resposta" style="width: 70px;"></span></div>
+            <div>c) 0,1⁴ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+            <div>d) 2,5² = <span class="espaco-resposta" style="width: 70px;"></span></div>
+            <div>e) 0,3³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+            <div>f) 1,5³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+        </div>
+    </div>
 </div>
 
+<!-- QUESTÃO 5 - PROBLEMAS -->
 <div class="questao">
-4) Uma comissão de jurados com 3 alunos será formada a partir de 20 estudantes. De quantas maneiras diferentes pode ser formada?
+    <div class="destaque">5) Resolva os problemas:</div>
+    <div class="subquestao">
+        <div class="problema">
+            a) João comprou 2,5 kg de arroz a R$ 4,80 o kg e 1,75 kg de feijão a R$ 7,20 o kg. Quanto gastou no total?<br>
+            <span style="margin-left: 30px;">R$ <span class="espaco-resposta" style="width: 200px;"></span></span>
+        </div>
+        
+    </div>
 </div>
 
-<div class="questao">
-5) Lança-se um dado e retira-se simultaneamente uma carta de um baralho de 52 cartas. Qual a probabilidade de a soma dos valores obtidos ser um número par?
+<!-- LINHA DE OBSERVAÇÃO -->
+<div style="margin-top: 15px;">
+    <p style="font-size: 10pt; color: #666;"><em>Boa prova! ✨</em></p>
 </div>
 
 </div>
