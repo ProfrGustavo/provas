@@ -2,294 +2,355 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Prova - Operações com Decimais, Frações, Potências e Notação Científica</title>
+<title>Prova de Progressão 8º Ano - 1° Bimestre</title>
 
 <style>
-
-@page{
-    size: A4;
-    margin: 1.2cm;
-}
-
 body{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-    margin: 0;
+    margin: 40px;
+    background-color: #f4f6f9;
 }
 
-.folha{
-    width: 100%;
-}
-
-.prova{
-    padding: 10px 20px;
-}
-
-.cabecalho{
+.cabecalho-colegio{
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 2px solid #000;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
 }
 
-.logo{
-    width: 65px;
+.logo-colegio{
+    width: 80px;
+    height: auto;
 }
 
 .nome-colegio{
-    font-size: 12pt;
+    font-size: 16px;
     font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.prova{
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 24px;
 }
 
 h2{
     text-align: center;
-    margin: 10px 0;
-    font-size: 16pt;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: normal;
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+hr{
+    margin: 20px 0;
+    border: 1px solid #ccc;
 }
 
 .questao{
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .subquestao{
-    margin-left: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.alternativas{
     margin-top: 8px;
-    line-height: 1.8;
 }
 
-.espaco-resposta{
-    margin-top: 3px;
-    border-bottom: 2px dotted #666;
-    width: 150px;
-    display: inline-block;
-    margin-left: 10px;
+.alternativas label{
+    display: block;
+    margin-bottom: 5px;
 }
 
-.espaco-resposta-pequeno{
-    margin-top: 3px;
-    border-bottom: 2px dotted #666;
-    width: 80px;
-    display: inline-block;
-    margin-left: 5px;
+img{
+    max-width: 300px;
+    display: block;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+.linha{
+    border-bottom: 1px solid #000;
+    margin: 10px 0 15px 0;
+    width: 100%;
+}
+
+.linha-resposta{
+    border-bottom: 1px dashed #666;
+    margin: 5px 0 10px 0;
+    width: 80%;
+    height: 20px;
+}
+
+.espaco-desenho{
+    height: 150px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: #fafafa;
+}
+
+@page{
+    size: A4;
+    margin: 1cm 1cm 1cm 1cm; 
+}
+
+.parte-titulo{
+    background-color: #e9ecef;
+    padding: 10px;
+    margin: 30px 0 20px 0;
+    border-left: 5px solid #2c3e50;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.destaque{
+    font-weight: bold;
+    color: #2c3e50;
 }
 
 .fracao {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    margin: 0 5px;
+    margin: 0 2px;
     font-size: 1.1em;
 }
 
 .fracao .numerador {
     display: block;
-    border-bottom: 2px solid black;
-    padding: 0 5px;
-    line-height: 1.4;
+    border-bottom: 1px solid black;
+    padding: 0 3px;
 }
 
 .fracao .denominador {
     display: block;
-    padding: 0 5px;
-    line-height: 1.4;
+    padding: 0 3px;
 }
 
-.potencia {
-    display: inline-block;
-    vertical-align: middle;
+.observacao{
+    font-size: 11px;
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
 }
 
-.potencia .base {
-    display: inline-block;
-    font-size: 1.1em;
-}
-
-.potencia .expoente {
-    display: inline-block;
-    font-size: 0.8em;
-    vertical-align: super;
-    margin-left: 2px;
-}
-
-table {
-    border-collapse: collapse;
-    margin: 20px 0 5px 0;
+table{
     width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
 }
 
-td {
-    padding: 8px 5px;
-    border: none;
-    font-size: 12pt;
+td, th{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
-.linha-itens {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 10px 0;
+th{
+    background-color: #f2f2f2;
 }
 
-.item-potencia {
-    width: 30%;
-    margin-bottom: 10px;
-}
-
-.destaque {
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-.problema {
-    margin-bottom: 20px;
-}
-
-.colunas-duas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 10px;
-}
-
-.coluna-esquerda, .coluna-direita {
+.quadro{
+    border: 1px solid #333;
+    padding: 15px;
     background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 5px;
+    margin: 15px 0;
 }
 
 </style>
+
 </head>
-
 <body>
-
-<div class="folha">
 
 <div class="prova">
 
-<div class="cabecalho">
-    <img src="logo.jpg" class="logo" alt="Logo">
-    <div class="nome-colegio">
-        COLÉGIO ESTADUAL ROCHA POMBO<br>
-        ENSINO FUNDAMENTAL, MÉDIO, NORMAL E PROFISSIONAL
-    </div>
-</div>
-
-
-<div style="display: flex; justify-content: space-between; margin: 15px 0 20px 0; font-size: 12pt;">
-    <span><strong>Professor:</strong> Gustavo de Medeiros</span>
-    <span><strong>Data:</strong> ___/___/_______</span>
-</div>
-
-<p style="margin: 5px 0 20px 0; font-size: 12pt;"><strong>Nome:</strong> _________________________________________________________ <strong>Turma:</strong> _______</p>
-
-<!-- QUESTÕES 1 E 2 EM DUAS COLUNAS -->
-<div class="colunas-duas">
-    <!-- COLUNA ESQUERDA - QUESTÃO 1 -->
-    <div class="coluna-esquerda">
-        <div class="questao" style="margin-bottom: 0;">
-            <div class="destaque">1) Operações com números decimais:</div>
-            <div class="subquestao">
-                a) 123,45 + 76,89 = <span class="espaco-resposta-pequeno"></span><br>
-                b) 458,30 - 129,76 = <span class="espaco-resposta-pequeno"></span><br>
-                c) 23,4 × 5,8 = <span class="espaco-resposta-pequeno"></span><br>
-                d) 156,8 ÷ 4 = <span class="espaco-resposta-pequeno"></span>
-            </div>
+    <div class="cabecalho-colegio">
+        <img src="logo.jpg" alt="Logo do Colégio" class="logo-colegio">
+        <div class="nome-colegio">
+            COLÉGIO ESTADUAL ROCHA POMBO - ENSINO FUNDAMENTAL, MÉDIO, NORMAL E PROFISSIONAL
         </div>
     </div>
-    
-    <!-- COLUNA DIREITA - QUESTÃO 2 -->
-    <div class="coluna-direita">
-        <div class="questao" style="margin-bottom: 0;">
-            <div class="destaque">2) Operações com frações:</div>
-            <div class="subquestao">
-                a) <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> + <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> = <span class="espaco-resposta-pequeno"></span><br>
-                b) <span class="fracao"><span class="numerador">7</span><span class="denominador">8</span></span> - <span class="fracao"><span class="numerador">2</span><span class="denominador">3</span></span> = <span class="espaco-resposta-pequeno"></span><br>
-                c) <span class="fracao"><span class="numerador">3</span><span class="denominador">7</span></span> × <span class="fracao"><span class="numerador">5</span><span class="denominador">6</span></span> = <span class="espaco-resposta-pequeno"></span><br>
-                d) <span class="fracao"><span class="numerador">4</span><span class="denominador">9</span></span> ÷ <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> = <span class="espaco-resposta-pequeno"></span>
-            </div>
+
+    <h1>PROVA DE PROGRESSÃO - 8° ANO</h1>
+    <h2>1° Bimestre - Matemática</h2>
+    <h2>Professor: Gustavo de Medeiros</h2>
+
+    <hr>
+
+    <p><strong>Nome:</strong> _________________________________________________________</p>
+    <p><strong>Data da 1ª parte:</strong> ____/____/______ <span style="margin-left: 50px;"><strong>Turma:</strong> _______</span></p>
+    <p><strong>Data da 2ª parte:</strong> ____/____/______</p>
+
+    <div style="text-align: center; margin: 10px 0; font-size: 14px; color: #555;">
+        ⚠️ A prova é dividida em duas partes. Cada parte será aplicada em um dia diferente.
+    </div>
+
+    <hr>
+
+    <!-- ==================== PARTE 1 ==================== -->
+    <div class="parte-titulo">
+        PARTE 1: Porcentagem, Frações e Decimais
+    </div>
+
+    <!-- QUESTÃO 1 - Porcentagem simples -->
+    <div class="questao">
+        <p><strong>1)</strong> Calcule as porcentagens abaixo (todas com resultados inteiros):</p>
+        <div class="subquestao">
+            a) 15% de 500 = <span class="linha-resposta" style="display: inline-block; width: 100px;"></span><br>
+            b) 20% de 350 = <span class="linha-resposta" style="display: inline-block; width: 100px;"></span><br>
+            c) 12% de 300 = <span class="linha-resposta" style="display: inline-block; width: 100px;"></span><br>
+            d) 25% de 640 = <span class="linha-resposta" style="display: inline-block; width: 100px;"></span>
         </div>
     </div>
-</div>
 
-<!-- QUESTÃO 3 - POTÊNCIAS COM NÚMEROS INTEIROS -->
-<div class="questao">
-    <div class="destaque">3) Calcule as potências (números inteiros):</div>
-    <div class="subquestao">
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-            <div>a) 2³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
-            <div>b) 5³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
-            <div>c) 3⁴ = <span class="espaco-resposta" style="width: 70px;"></span></div>
-            <div>d) 10⁴ = <span class="espaco-resposta" style="width: 70px;"></span></div>
-            <div>e) 7³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
-            <div>f) 6⁴ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+    <!-- QUESTÃO 2 - Situação problema com porcentagem -->
+    <div class="questao">
+        <p><strong>2)</strong> Uma loja estava vendendo um celular por R$ 1.200,00. No fim de semana, a loja ofereceu um desconto de 15% para pagamento à vista.</p>
+        <p>a) Qual o valor do desconto em reais?</p>
+        <div class="linha-resposta"></div>
+        <p>b) Qual o valor do celular com o desconto?</p>
+        <div class="linha-resposta"></div>
+    </div>
+
+    <!-- QUESTÃO 3 - Multiplicação de frações -->
+    <div class="questao">
+        <p><strong>3)</strong> Calcule as multiplicações de frações e simplifique quando possível:</p>
+        <div class="subquestao">
+            a) <span class="fracao"><span class="numerador">2</span><span class="denominador">3</span></span> × <span class="fracao"><span class="numerador">4</span><span class="denominador">5</span></span> = <span class="linha-resposta" style="display: inline-block; width: 100px;"></span><br>
+            b) <span class="fracao"><span class="numerador">3</span><span class="denominador">7</span></span> × <span class="fracao"><span class="numerador">2</span><span class="denominador">3</span></span> = <span class="linha-resposta" style="display: inline-block; width: 100px;"></span><br>
+            c) <span class="fracao"><span class="numerador">5</span><span class="denominador">8</span></span> × <span class="fracao"><span class="numerador">4</span><span class="denominador">5</span></span> = <span class="linha-resposta" style="display: inline-block; width: 100px;"></span>
         </div>
     </div>
-</div>
 
-<!-- QUESTÃO 4 - POTÊNCIAS COM NÚMEROS DECIMAIS -->
-<div class="questao">
-    <div class="destaque">4) Calcule as potências (números decimais):</div>
-    <div class="subquestao">
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-            <div>a) 0,5³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
-            <div>b) 1,2² = <span class="espaco-resposta" style="width: 70px;"></span></div>
-            <div>c) 0,1⁴ = <span class="espaco-resposta" style="width: 70px;"></span></div>
-            <div>d) 2,5² = <span class="espaco-resposta" style="width: 70px;"></span></div>
-            <div>e) 0,3³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
-            <div>f) 1,5³ = <span class="espaco-resposta" style="width: 70px;"></span></div>
+    <!-- QUESTÃO 4 - Situação problema com frações -->
+    <div class="questao">
+        <p><strong>4)</strong> João comeu <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> de uma pizza e Maria comeu <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> da mesma pizza. Que fração da pizza os dois comeram juntos?</p>
+        <div class="linha-resposta"></div>
+        <div class="linha-resposta"></div>
+    </div>
+
+    <!-- QUESTÃO 5 - Operações com decimais -->
+    <div class="questao">
+        <p><strong>5)</strong> Resolva as operações com números decimais:</p>
+        <div class="subquestao">
+            a) 23,45 + 17,89 = <span class="linha-resposta" style="display: inline-block; width: 100px;"></span><br>
+            b) 56,80 - 29,45 = <span class="linha-resposta" style="display: inline-block; width: 100px;"></span><br>
+            c) 12,4 × 3,5 = <span class="linha-resposta" style="display: inline-block; width: 100px;"></span><br>
+            d) 45,6 ÷ 3 = <span class="linha-resposta" style="display: inline-block; width: 100px;"></span>
         </div>
     </div>
-</div>
 
-<!-- QUESTÃO 5 - PROBLEMA -->
-<div class="questao">
-    <div class="destaque">5) Resolva o problema:</div>
-    <div class="subquestao">
-        <div class="problema">
-            João comprou 2,5 kg de arroz a R$ 4,80 o kg e 1,75 kg de feijão a R$ 7,20 o kg. Quanto gastou no total?<br>
-            <span style="margin-left: 30px;">R$ <span class="espaco-resposta" style="width: 250px;"></span></span>
+    <!-- QUESTÃO 6 - Transformação de fração em decimal -->
+    <div class="questao">
+        <p><strong>6)</strong> Transforme as frações em números decimais:</p>
+        <div class="subquestao">
+            a) <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> = <span class="linha-resposta" style="display: inline-block; width: 80px;"></span><br>
+            b) <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> = <span class="linha-resposta" style="display: inline-block; width: 80px;"></span><br>
+            c) <span class="fracao"><span class="numerador">7</span><span class="denominador">8</span></span> = <span class="linha-resposta" style="display: inline-block; width: 80px;"></span><br>
+            d) <span class="fracao"><span class="numerador">9</span><span class="denominador">4</span></span> = <span class="linha-resposta" style="display: inline-block; width: 80px;"></span>
         </div>
     </div>
-</div>
 
-<!-- QUESTÃO 6 - NOTAÇÃO CIENTÍFICA (TIRAR DA NOTAÇÃO) -->
-<div class="questao">
-    <div class="destaque">6) Escreva os números abaixo na forma decimal (tirar da notação científica):</div>
-    <div class="subquestao">
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-            <div>a) 2,5 × 10³ = <span class="espaco-resposta" style="width: 100px;"></span></div>
-            <div>b) 1,2 × 10⁴ = <span class="espaco-resposta" style="width: 100px;"></span></div>
-            <div>c) 3,7 × 10² = <span class="espaco-resposta" style="width: 100px;"></span></div>
-            <div>d) 5,8 × 10⁵ = <span class="espaco-resposta" style="width: 100px;"></span></div>
-            <div>e) 4,2 × 10⁻² = <span class="espaco-resposta" style="width: 100px;"></span></div>
-            <div>f) 6,3 × 10⁻³ = <span class="espaco-resposta" style="width: 100px;"></span></div>
-        </div>
+    <!-- LINHA DE DIVISÃO ENTRE PARTES -->
+    <div style="border-top: 3px double #333; margin: 40px 0 20px 0; text-align: center; position: relative;">
+        <span style="background-color: white; padding: 0 20px; font-weight: bold; font-size: 16px;">FIM DA PARTE 1 • INÍCIO DA PARTE 2</span>
     </div>
-</div>
 
-<!-- QUESTÃO 7 - NOTAÇÃO CIENTÍFICA (COLOCAR EM NOTAÇÃO) -->
-<div class="questao">
-    <div class="destaque">7) Escreva os números abaixo em notação científica:</div>
-    <div class="subquestao">
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-            <div>a) 3.450 = <span class="espaco-resposta" style="width: 100px;"></span></div>
-            <div>b) 124.000 = <span class="espaco-resposta" style="width: 100px;"></span></div>
-            <div>c) 0,0056 = <span class="espaco-resposta" style="width: 100px;"></span></div>
-            <div>d) 0,00078 = <span class="espaco-resposta" style="width: 100px;"></span></div>
-        </div>
+    <!-- ==================== PARTE 2 ==================== -->
+    <div class="parte-titulo">
+        PARTE 2: Aumentos e Descontos Sucessivos
     </div>
-</div>
 
-<!-- LINHA DE OBSERVAÇÃO -->
-<div style="margin-top: 15px;">
-    <p style="font-size: 10pt; color: #666;"><em>Boa prova! ✨</em></p>
-</div>
+    <div class="observacao">
+        * Todas as respostas desta parte devem ser números inteiros.
+    </div>
 
-</div>
+    <!-- QUESTÃO 7 - Aumento simples -->
+    <div class="questao">
+        <p><strong>7)</strong> Um produto custava R$ 200,00. Ele sofreu um aumento de 10%. Qual o novo preço?</p>
+        <div class="linha-resposta"></div>
+        <div class="linha-resposta"></div>
+    </div>
+
+    <!-- QUESTÃO 8 - Desconto simples -->
+    <div class="questao">
+        <p><strong>8)</strong> Uma televisão custa R$ 900,00. Se ela tiver um desconto de 15%, qual será o preço final?</p>
+        <div class="linha-resposta"></div>
+        <div class="linha-resposta"></div>
+    </div>
+
+    <!-- QUESTÃO 9 - Aumento e desconto sucessivos -->
+    <div class="questao">
+        <p><strong>9)</strong> Um funcionário ganhava R$ 1.200,00. Ele recebeu um aumento de 10% e, no mês seguinte, um desconto de 15% (por conta de faltas).</p>
+        <p>a) Qual o salário após o aumento de 10%?</p>
+        <div class="linha-resposta"></div>
+        <p>b) Qual o salário após o desconto de 15% (aplicado sobre o valor com aumento)?</p>
+        <div class="linha-resposta"></div>
+        <p>c) O valor final é maior, menor ou igual ao salário inicial?</p>
+        <div class="linha-resposta"></div>
+    </div>
+
+    <!-- QUESTÃO 10 - Desconto e aumento sucessivos -->
+    <div class="questao">
+        <p><strong>10)</strong> Um produto custava R$ 500,00. Primeiro sofreu um desconto de 20% e depois um aumento de 10%.</p>
+        <p>a) Qual o valor após o desconto de 20%?</p>
+        <div class="linha-resposta"></div>
+        <p>b) Qual o valor final após o aumento de 10%?</p>
+        <div class="linha-resposta"></div>
+    </div>
+
+    <!-- QUESTÃO 11 - Problema com aumentos sucessivos -->
+    <div class="questao">
+        <p><strong>11)</strong> O aluguel de uma casa era R$ 800,00. No primeiro ano aumentou 5% e no segundo ano aumentou mais 10%.</p>
+        <p>a) Qual o valor do aluguel após o primeiro aumento?</p>
+        <div class="linha-resposta"></div>
+        <p>b) Qual o valor do aluguel após o segundo aumento?</p>
+        <div class="linha-resposta"></div>
+    </div>
+
+    <!-- QUESTÃO 12 - Descontos sucessivos -->
+    <div class="questao">
+        <p><strong>12)</strong> Uma geladeira custava R$ 2.000,00. Na Black Friday, teve um desconto de 15% e depois um desconto adicional de 10% (sobre o preço já com desconto).</p>
+        <p>a) Qual o preço após o primeiro desconto?</p>
+        <div class="linha-resposta"></div>
+        <p>b) Qual o preço final após o segundo desconto?</p>
+        <div class="linha-resposta"></div>
+    </div>
+
+    <!-- ESPAÇO PARA OBSERVAÇÕES -->
+    <hr>
+    <div style="margin-top: 30px;">
+        <table>
+            <tr>
+                <td style="border: none; width: 50%;">_________________________________</td>
+                <td style="border: none; width: 25%;">Parte 1: _________</td>
+                <td style="border: none; width: 25%;">Parte 2: _________</td>
+            </tr>
+            <tr>
+                <td style="border: none;">Assinatura do Professor</td>
+                <td style="border: none;">Nota</td>
+                <td style="border: none;">Nota</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="margin-top: 20px; text-align: center; font-size: 10pt; color: #666;">
+        <em>Boa prova! Resolva com calma e atenção.</em>
+    </div>
 
 </div>
 
