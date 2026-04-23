@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Prova de Matemática - Frações e Decimais</title>
+<title>Prova de Matemática - Frações e Decimais (Parte 1 e 2)</title>
 
 <style>
 body{
@@ -123,7 +123,7 @@ hr{
 .linha-resposta-curta {
     border-bottom: 1px dashed #666;
     display: inline-block;
-    width: 70px;
+    width: 80px;
     margin-left: 5px;
     vertical-align: middle;
 }
@@ -133,6 +133,8 @@ hr{
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 table{
@@ -146,6 +148,16 @@ td{
     padding: 5px;
 }
 
+.divisao-parte {
+    background-color: #d1e0eb;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+    margin: 20px 0 15px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #1e466e;
+}
 </style>
 </head>
 <body>
@@ -153,7 +165,6 @@ td{
 <div class="prova">
 
     <div class="cabecalho-colegio">
-        <!-- Logo simbólica (sem imagem externa, usa texto) -->
         <div class="logo-colegio" style="background: #2c3e50; color:white; display:flex; align-items:center; justify-content:center; border-radius:50%;">📐</div>
         <div class="nome-colegio">
             COLÉGIO ESTADUAL ROCHA POMBO<br>
@@ -164,108 +175,121 @@ td{
     <div class="espaco-nome">
         <span><strong>Nome:</strong> _________________________________________________________</span>
         <span><strong>Turma:</strong> _______</span>
-        <span>Todas as questões devem apresentar cálculos no verso ou folha avulsa de forma organizada </span>
+        <span><strong>Data:</strong> ___/___/_____</span>
     </div>
-
+    <div style="text-align: right; font-size: 12px; margin-top: -8px; margin-bottom: 8px;">
+        ⚠️ Todas as questões devem apresentar cálculos no verso ou folha avulsa de forma organizada.
+    </div>
     <hr>
 
-    <!-- ========== PRIMEIRA LINHA DE COLUNAS ========== -->
+    <!-- ==================== PARTE 1 - QUESTÕES 1 A 4 (CÁLCULOS) ==================== -->
+    <div class="divisao-parte">
+        📘 PARTE 1 – Operações com frações, decimais e transformações (questões 1 a 4)
+    </div>
+
     <div class="colunas">
-        <!-- Coluna 1 -->
+        <!-- Coluna esquerda (Questões 1 e 2) -->
         <div class="item-coluna">
-            <!-- QUESTÃO 1 - Adição/subtração de frações (mesmo denominador) -->
+            <!-- QUESTÃO 1 - Adição/subtração de frações (mesmo e diferentes denominadores) -->
             <div class="questao">
-                <p><strong>1)</strong> Efetue as operações com frações de mesmo denominador (respostas em fração irredutível e positivas):</p>
+                <p><strong>1)</strong> Efetue as operações com frações (respostas em fração irredutível e positivas):</p>
                 <div class="subquestao">
                     a) <span class="fracao"><span class="numerador">3</span><span class="denominador">7</span></span> + <span class="fracao"><span class="numerador">2</span><span class="denominador">7</span></span> = <span class="linha-resposta-curta"></span><br>
                     b) <span class="fracao"><span class="numerador">5</span><span class="denominador">9</span></span> - <span class="fracao"><span class="numerador">2</span><span class="denominador">9</span></span> = <span class="linha-resposta-curta"></span><br>
                     c) <span class="fracao"><span class="numerador">1</span><span class="denominador">2</span></span> + <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> = <span class="linha-resposta-curta"></span><br>
-                    d) <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> - <span class="fracao"><span class="numerador">1</span><span class="denominador">6</span></span> = <span class="linha-resposta-curta"></span><br>
-                        
+                    d) <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> - <span class="fracao"><span class="numerador">1</span><span class="denominador">6</span></span> = <span class="linha-resposta-curta"></span>
                 </div>
             </div>
 
-
-            <!-- QUESTÃO 2 - Adição e subtração de decimais (até 3 casas, níveis variados) -->
+            <!-- QUESTÃO 2 - Adição e subtração de decimais (até 3 casas) -->
             <div class="questao">
                 <p><strong>2)</strong> Resolva as operações com números decimais:</p>
                 <div class="subquestao">
                     a) 12,5 + 7,25 = <span class="linha-resposta-curta"></span><br>
                     b) 34,78 - 12,3 = <span class="linha-resposta-curta"></span><br>
-                    c) 5,632 + 0,98 = <span class="linha-resposta-curta"></span><br>
-                      </div>
+                    c) 5,632 + 0,98 = <span class="linha-resposta-curta"></span>
+                </div>
             </div>
+        </div>
 
-
-
-
-             <!-- QUESTÃO 9 - Problema contextualizado com frações e decimais -->
-            <div class="questao">
-                <p><strong>9)</strong> Maria comprou 2,5 kg de arroz e usou <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> kg para o almoço. Quantos quilos sobraram? (resposta em decimal)</p>
-                <div class="linha-resposta"></div>
-                <p><strong>10)</strong> De uma barra de chocolate de 1,8 kg, João comeu 0,35 kg e Pedro comeu <span class="fracao"><span class="numerador">1</span><span class="denominador">5</span></span> kg. Qual a quantidade total consumida? (resposta em fração irredutível)</p>
-                <div class="linha-resposta"></div>
-            </div>
-
-
-
-
-            <!-- QUESTÃO 10 (deslocada) - adição de dízimas com fração -->
-            <div class="questao">
-                <p><strong>11)</strong> Efetue: 0,333... + <span class="fracao"><span class="numerador">1</span><span class="denominador">6</span></span>  (resposta em fração)</p>
-                <div class="linha-resposta"></div>
-                <p><strong>12)</strong> (Desafio) Uma loja oferece desconto de 0,125 sobre o preço de R$ 80,00. Calcule o valor do desconto em forma de fração irredutível e também o preço final.</p>
-                <div class="linha-resposta"></div>
-                <div class="linha-resposta"></div>
-            </div>
-
-
-        </div><!-- fim coluna 1 -->
-
-        <!-- Coluna 2 -->
+        <!-- Coluna direita (Questões 3 e 4) -->
         <div class="item-coluna">
-           
-
-
             <!-- QUESTÃO 3 - Transformação de decimais em fração (incluindo dízimas) -->
             <div class="questao">
                 <p><strong>3)</strong> Converta os decimais abaixo em frações (simplifique sempre que possível):</p>
                 <div class="subquestao">
                     a) 0,45 = <span class="linha-resposta-curta"></span><br>
                     b) 2,044 = <span class="linha-resposta-curta"></span><br>
-                    c) 0,212121...<span style="text-decoration:overline"></span>) = <span class="linha-resposta-curta"></span><br>
-                    d) 0,123123123...<span style="text-decoration:overline"></span>) = <span class="linha-resposta-curta"></span>
+                    c) 0,212121... (dízima periódica 0,<span style="text-decoration:overline">21</span>) = <span class="linha-resposta-curta"></span><br>
+                    d) 0,123123123... (dízima 0,<span style="text-decoration:overline">123</span>) = <span class="linha-resposta-curta"></span>
                 </div>
             </div>
 
             <!-- QUESTÃO 4 - Operações mistas (fração com decimal) -->
             <div class="questao">
-                <p><strong>4)</strong> Resolva as operações mistas, atentando para o formato pedido na resposta:</p>
+                <p><strong>4)</strong> Resolva as operações mistas, atentando para o formato pedido:</p>
                 <div class="subquestao">
-                    a) 2,5 - <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> =  (resposta em decimal) <span class="linha-resposta-curta"></span><br>
-                    b) <span class="fracao"><span class="numerador">1</span><span class="denominador">2</span></span> + 0,42 =  (resposta em decimal) <span class="linha-resposta-curta"></span><br>
-                    c) <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> - 0,15 =  (resposta em fração irredutível) <span class="linha-resposta-curta"></span><br>
-                       </div>
+                    a) 2,5 - <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> = (resposta em decimal) <span class="linha-resposta-curta"></span><br>
+                    b) <span class="fracao"><span class="numerador">1</span><span class="denominador">2</span></span> + 0,42 = (resposta em decimal) <span class="linha-resposta-curta"></span><br>
+                    c) <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> - 0,15 = (resposta em fração irredutível) <span class="linha-resposta-curta"></span>
+                </div>
             </div>
-        </div><!-- fim coluna 2 -->
-    </div><!-- fim primeira linha de colunas -->
-
-    <!-- ========== SEGUNDA LINHA DE COLUNAS (questões 7 a 10, para manter equilíbrio) ========== -->
-    <div class="colunas">
-       
-
-        <div class="item-coluna">
-           
-
-
         </div>
     </div>
 
-    <!-- Rodapé com instruções -->
-    <div style="margin-top: 20px; border-top: 1px solid #ccc; padding-top: 8px; font-size: 12px; text-align: center;">
-        <strong>Instruções finais:</strong> Apresente todos os cálculos no espaço abaixo ou em folha anexa. Respostas sem justificativa não serão consideradas. <br>
-        Nas dízimas periódicas, use a notação de barra (ex: 0,<span style="text-decoration:overline">3</span>). 
-        Nas frações, sempre simplifique.
+    <!-- ==================== PARTE 2 - QUESTÕES 5 A 8 (PROBLEMAS CONTEXTUAIS) ==================== -->
+    <div class="divisao-parte">
+        🧾 PARTE 2 – Situações-problema com dinheiro, frações e decimais (questões 5 a 8)
+    </div>
+
+    <div class="colunas">
+        <!-- Coluna esquerda (questões 5 e 6) -->
+        <div class="item-coluna">
+            <!-- Questão 5 - Problema com compras em reais (adição/subtração) -->
+            <div class="questao">
+                <p><strong>5)</strong> João foi à papelaria com R$ 50,00. Comprou um caderno por R$ 22,90 e uma caneta por R$ 3,75. Quanto sobrou de troco?</p>
+                <div class="linha-resposta"></div>
+                <div class="linha-resposta-curta" style="width: 90%; margin-left: 0;"></div>
+            </div>
+
+            <!-- Questão 6 - Problema com fração de um valor em reais -->
+            <div class="questao">
+                <p><strong>6)</strong> Um celular custa R$ 800,00. Pedro pagou <span class="fracao"><span class="numerador">1</span><span class="denominador">4</span></span> do valor como entrada e o restante vai parcelar.</p>
+                <p>a) Qual o valor pago na entrada? <span class="linha-resposta-curta"></span></p>
+                <p>b) Quanto ainda falta pagar? <span class="linha-resposta-curta"></span></p>
+            </div>
+        </div>
+
+        <!-- Coluna direita (questões 7 e 8) -->
+        <div class="item-coluna">
+            <!-- Questão 7 - Problema com fração e decimal (comida) -->
+            <div class="questao">
+                <p><strong>7)</strong> Uma torta pesa 1,5 kg. João comeu 0,3 kg e Maria comeu <span class="fracao"><span class="numerador">1</span><span class="denominador">4</span></span> kg. Quantos quilos de torta sobraram? (resposta em decimal)</p>
+                <div class="linha-resposta"></div>
+                <div class="linha-resposta-curta" style="width: 90%; margin-left: 0;"></div>
+            </div>
+
+            <!-- Questão 8 - Problema com duas operações (fração e depois decimal) -->
+            <div class="questao">
+                <p><strong>8)</strong> Ana tinha R$ 120,50. Gastou <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> desse valor em roupas e depois mais R$ 25,80 em um lanche. Quanto sobrou?</p>
+                <div class="linha-resposta"></div>
+                <div class="linha-resposta-curta" style="width: 90%; margin-left: 0;"></div>
+                <p style="margin-top: 8px; font-size: 0.8rem;">(Dica: calcule primeiro quanto foi gasto em roupas, depois some com o lanche e subtraia do total.)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Espaço extra para cálculos -->
+    <div style="margin-top: 30px;">
+        <div style="border-top: 2px dotted #2c3e50; padding-top: 8px; font-weight: bold;">✍️ Espaço para os cálculos (use o verso se necessário):</div>
+        <div style="height: 100px; border-bottom: 1px solid #ccc; margin-top: 5px;"></div>
+        <div style="height: 100px; border-bottom: 1px solid #ccc; margin-top: 10px;"></div>
+    </div>
+
+    <!-- Rodapé -->
+    <div style="margin-top: 25px; border-top: 1px solid #ccc; padding-top: 8px; font-size: 12px; text-align: center;">
+        <strong>Instruções finais:</strong> Apresente todos os cálculos de forma organizada. Respostas sem justificativa não serão consideradas. <br>
+        Nas dízimas periódicas, use a notação de barra (ex: 0,<span style="text-decoration:overline">3</span>). Frações sempre devem ser simplificadas.
     </div>
 
 </div> <!-- fim prova -->
