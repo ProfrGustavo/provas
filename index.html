@@ -2,297 +2,318 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Prova de Matemática - Frações e Decimais (Parte 1 e 2)</title>
-
+<title>Prova de Matemática - Frações e Decimais</title>
 <style>
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 20px;
-    background-color: #f4f6f9;
-}
-
-.cabecalho-colegio{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #000;
-}
-
-.logo-colegio{
-    width: 70px;
-    height: auto;
-}
-
-.nome-colegio{
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.2;
-}
-
-.prova{
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h1{
-    text-align: center;
-    margin: 5px 0;
-    font-size: 20px;
-}
-
-h2{
-    text-align: center;
-    font-weight: normal;
-    margin: 3px 0;
-    color: #2c3e50;
-    font-size: 16px;
-}
-
-hr{
-    margin: 10px 0;
-    border: 1px solid #ccc;
-}
-
-.questao{
-    margin-bottom: 12px;
-    page-break-inside: avoid;
-}
-
-.subquestao{
-    margin-left: 15px;
-    margin-top: 3px;
-}
-
-.linha-resposta{
-    border-bottom: 1px dashed #666;
-    margin: 3px 0 6px 0;
-    width: 100%;
-    height: 18px;
-}
-
-@page{
-    size: A4;
-    margin: 1cm;
-}
-
-.parte-titulo{
-    background-color: #e9ecef;
-    padding: 5px 8px;
-    margin: 10px 0 10px 0;
-    border-left: 5px solid #2c3e50;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.fracao {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    margin: 0 2px;
-    font-size: 1em;
-}
-
-.fracao .numerador {
-    display: block;
-    border-bottom: 1px solid black;
-    padding: 0 2px;
-}
-
-.fracao .denominador {
-    display: block;
-    padding: 0 2px;
-}
-
-.colunas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 5px;
-}
-
-.item-coluna {
-    break-inside: avoid;
-}
-
-.linha-resposta-curta {
-    border-bottom: 1px dashed #666;
-    display: inline-block;
-    width: 80px;
-    margin-left: 5px;
-    vertical-align: middle;
-}
-
-.espaco-nome {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-td{
-    border: none;
-    padding: 5px;
-}
-
-.divisao-parte {
-    background-color: #d1e0eb;
-    text-align: center;
-    font-weight: bold;
-    padding: 8px;
-    margin: 20px 0 15px 0;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    color: #1e466e;
-}
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 20px;
+        background-color: #eef2f5;
+    }
+    .prova {
+        max-width: 1100px;
+        margin: 0 auto;
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .cabecalho-colegio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #1e466e;
+    }
+    .logo-colegio {
+        width: 70px;
+        height: 70px;
+        background: #1e466e;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 32px;
+    }
+    .nome-colegio {
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.3;
+        color: #1e466e;
+    }
+    h1 {
+        text-align: center;
+        margin: 0;
+        font-size: 1.8rem;
+        color: #2c3e50;
+    }
+    .subtitulo {
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-weight: normal;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 8px;
+    }
+    .info-aluno {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+        background: #f0f4f8;
+        padding: 10px 15px;
+        border-radius: 8px;
+        margin: 15px 0;
+        font-size: 0.9rem;
+    }
+    .info-aluno span {
+        font-weight: bold;
+    }
+    .aviso {
+        text-align: right;
+        font-size: 0.75rem;
+        color: #c0392b;
+        margin-top: -10px;
+        margin-bottom: 15px;
+    }
+    .parte-titulo {
+        background-color: #d9e6f5;
+        padding: 8px 15px;
+        margin: 25px 0 15px 0;
+        border-left: 8px solid #1e466e;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #1e466e;
+        border-radius: 0 8px 8px 0;
+    }
+    .colunas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-top: 10px;
+    }
+    .questao {
+        margin-bottom: 28px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    .questao p {
+        font-weight: bold;
+        margin-bottom: 8px;
+        background: #f9f9f9;
+        padding: 5px;
+        border-radius: 6px;
+    }
+    .subquestao {
+        margin-left: 20px;
+        margin-top: 6px;
+        margin-bottom: 10px;
+    }
+    .subquestao-item {
+        margin: 8px 0;
+    }
+    .linha-resposta {
+        border-bottom: 1px dashed #666;
+        margin: 5px 0 8px 0;
+        width: 100%;
+        height: 24px;
+    }
+    .linha-resposta-curta {
+        border-bottom: 1px dashed #666;
+        display: inline-block;
+        width: 100px;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+    .fracao {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        margin: 0 2px;
+        font-size: 1em;
+    }
+    .fracao .numerador {
+        display: block;
+        border-bottom: 1px solid black;
+        padding: 0 4px;
+    }
+    .fracao .denominador {
+        display: block;
+        padding: 0 4px;
+    }
+    .espaco-calculos {
+        margin-top: 35px;
+        border-top: 2px dotted #2c3e50;
+        padding-top: 15px;
+    }
+    .calc-linha {
+        height: 80px;
+        border-bottom: 1px solid #ccc;
+        margin: 15px 0;
+    }
+    footer {
+        margin-top: 25px;
+        font-size: 0.7rem;
+        text-align: center;
+        color: #555;
+        border-top: 1px solid #ccc;
+        padding-top: 12px;
+    }
+    @media print {
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+        .prova {
+            box-shadow: none;
+            padding: 15px;
+        }
+        .aviso {
+            color: black;
+        }
+        .linha-resposta, .linha-resposta-curta {
+            border-bottom: 1px solid black;
+        }
+    }
+    .destaque {
+        background: #fef5e7;
+        padding: 6px;
+        border-radius: 6px;
+    }
 </style>
 </head>
 <body>
-
 <div class="prova">
-
     <div class="cabecalho-colegio">
-        <div class="logo-colegio" style="background: #2c3e50; color:white; display:flex; align-items:center; justify-content:center; border-radius:50%;">📐</div>
+        <div class="logo-colegio">📐</div>
         <div class="nome-colegio">
             COLÉGIO ESTADUAL ROCHA POMBO<br>
             ENSINO FUNDAMENTAL, MÉDIO, NORMAL E PROFISSIONAL
         </div>
     </div>
+    <h1>AVALIAÇÃO DE MATEMÁTICA</h1>
+    <div class="subtitulo">Frações, Decimais e Situações‑Problema</div>
 
-    <div class="espaco-nome">
-        <span><strong>Nome:</strong> _________________________________________________________</span>
-        <span><strong>Turma:</strong> _______</span>
-        <span><strong>Data:</strong> ___/___/_____</span>
+    <div class="info-aluno">
+        <span>Nome: _________________________________________________</span>
+        <span>Turma: ________</span>
+        <span>Data: ___/___/______</span>
     </div>
-    <div style="text-align: right; font-size: 12px; margin-top: -8px; margin-bottom: 8px;">
-        ⚠️ Todas as questões devem apresentar cálculos no verso ou folha avulsa de forma organizada.
-    </div>
-    <hr>
+    <div class="aviso">📌 Atenção: Apresente todos os cálculos de forma clara e organizada no espaço indicado ou no verso. Respostas sem justificativa perderão pontos.</div>
 
-    <!-- ==================== PARTE 1 - QUESTÕES 1 A 4 (CÁLCULOS) ==================== -->
- 
+    <!-- ==================== PARTE 1 - OPERAÇÕES ==================== -->
+    <div class="parte-titulo">📘 PARTE 1 – OPERAÇÕES COM FRAÇÕES E DECIMAIS</div>
 
     <div class="colunas">
-        <!-- Coluna esquerda (Questões 1 e 2) -->
+        <!-- Coluna da esquerda -->
         <div class="item-coluna">
-            <!-- QUESTÃO 1 - Adição/subtração de frações (mesmo e diferentes denominadores) -->
+            <!-- Questão 1 - Frações -->
             <div class="questao">
-                <p><strong>1)</strong> Efetue as operações com frações (respostas em fração irredutível e positivas):</p>
+                <p>1) Efetue as operações com frações e dê a resposta na forma irredutível (simplificada):</p>
                 <div class="subquestao">
-                    a) <span class="fracao"><span class="numerador">3</span><span class="denominador">7</span></span> + <span class="fracao"><span class="numerador">2</span><span class="denominador">7</span></span> = <span class="linha-resposta-curta"></span><br>
-                    b) <span class="fracao"><span class="numerador">5</span><span class="denominador">9</span></span> - <span class="fracao"><span class="numerador">2</span><span class="denominador">9</span></span> = <span class="linha-resposta-curta"></span><br>
-                    c) <span class="fracao"><span class="numerador">1</span><span class="denominador">2</span></span> + <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> = <span class="linha-resposta-curta"></span><br>
-                    d) <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> - <span class="fracao"><span class="numerador">1</span><span class="denominador">6</span></span> = <span class="linha-resposta-curta"></span>
+                    <div class="subquestao-item">a) <span class="fracao"><span class="numerador">3</span><span class="denominador">7</span></span> + <span class="fracao"><span class="numerador">2</span><span class="denominador">7</span></span> = <span class="linha-resposta-curta"></span></div>
+                    <div class="subquestao-item">b) <span class="fracao"><span class="numerador">5</span><span class="denominador">9</span></span> - <span class="fracao"><span class="numerador">2</span><span class="denominador">9</span></span> = <span class="linha-resposta-curta"></span></div>
+                    <div class="subquestao-item">c) <span class="fracao"><span class="numerador">1</span><span class="denominador">2</span></span> + <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> = <span class="linha-resposta-curta"></span></div>
+                    <div class="subquestao-item">d) <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> - <span class="fracao"><span class="numerador">1</span><span class="denominador">6</span></span> = <span class="linha-resposta-curta"></span></div>
                 </div>
             </div>
 
-            <!-- QUESTÃO 2 - Adição e subtração de decimais (até 3 casas) -->
+            <!-- Questão 2 - Decimais -->
             <div class="questao">
-                <p><strong>2)</strong> Resolva as operações com números decimais:</p>
+                <p>2) Resolva as operações com números decimais:</p>
                 <div class="subquestao">
-                    a) 12,5 + 7,25 = <span class="linha-resposta-curta"></span><br>
-                    b) 34,78 - 12,3 = <span class="linha-resposta-curta"></span><br>
-                    c) 5,632 + 0,98 = <span class="linha-resposta-curta"></span>
+                    <div class="subquestao-item">a) 12,5 + 7,25 = <span class="linha-resposta-curta"></span></div>
+                    <div class="subquestao-item">b) 34,78 - 12,3 = <span class="linha-resposta-curta"></span></div>
+                    <div class="subquestao-item">c) 5,632 + 0,98 = <span class="linha-resposta-curta"></span></div>
                 </div>
             </div>
         </div>
 
-        <!-- Coluna direita (Questões 3 e 4) -->
+        <!-- Coluna da direita -->
         <div class="item-coluna">
-            <!-- QUESTÃO 3 - Transformação de decimais em fração (incluindo dízimas) -->
+            <!-- Questão 3 - Decimais para fração -->
             <div class="questao">
-                <p><strong>3)</strong> Converta os decimais abaixo em frações (simplifique sempre que possível):</p>
+                <p>3) Converta os números decimais abaixo em frações. Simplifique sempre que possível:</p>
                 <div class="subquestao">
-                    a) 0,45 = <span class="linha-resposta-curta"></span><br>
-                    b) 2,044 = <span class="linha-resposta-curta"></span><br>
-                    c) 0,212121... (dízima periódica 0,<span style="text-decoration:overline">21</span>) = <span class="linha-resposta-curta"></span><br>
-                    d) 0,123123123... (dízima 0,<span style="text-decoration:overline">123</span>) = <span class="linha-resposta-curta"></span>
+                    <div class="subquestao-item">a) 0,45 = <span class="linha-resposta-curta"></span></div>
+                    <div class="subquestao-item">b) 2,044 = <span class="linha-resposta-curta"></span></div>
+                    <div class="subquestao-item">c) 0,212121... (dízima periódica) = <span class="linha-resposta-curta"></span></div>
+                    <div class="subquestao-item">d) 0,123123123... (dízima periódica) = <span class="linha-resposta-curta"></span></div>
                 </div>
             </div>
 
-            <!-- QUESTÃO 4 - Operações mistas (fração com decimal) -->
+            <!-- Questão 4 - Mistas -->
             <div class="questao">
-                <p><strong>4)</strong> Resolva as operações mistas, atentando para o formato pedido:</p>
+                <p>4) Resolva as operações mistas, atentando para o formato pedido:</p>
                 <div class="subquestao">
-                    a) 2,5 - <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> = (resposta em decimal) <span class="linha-resposta-curta"></span><br>
-                    b) <span class="fracao"><span class="numerador">1</span><span class="denominador">2</span></span> + 0,42 = (resposta em decimal) <span class="linha-resposta-curta"></span><br>
-                    c) <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> - 0,15 = (resposta em fração irredutível) <span class="linha-resposta-curta"></span>
+                    <div class="subquestao-item">a) 2,5 - <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> = (resposta decimal) <span class="linha-resposta-curta"></span></div>
+                    <div class="subquestao-item">b) <span class="fracao"><span class="numerador">1</span><span class="denominador">2</span></span> + 0,42 = (resposta decimal) <span class="linha-resposta-curta"></span></div>
+                    <div class="subquestao-item">c) <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> - 0,15 = (resposta em fração irredutível) <span class="linha-resposta-curta"></span></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ==================== PARTE 2 - QUESTÕES 5 A 8 (PROBLEMAS CONTEXTUAIS) ==================== -->
-     <div class="espaco-nome">
-        <span><strong>Nome:</strong> _________________________________________________________</span>
-        <span><strong>Turma:</strong> _______</span>
-        <span><strong>Data:</strong> ___/___/_____</span>
-    </div>
-
+    <!-- ==================== PARTE 2 - PROBLEMAS CONTEXTUAIS ==================== -->
+    <div class="parte-titulo">🧠 PARTE 2 – SITUAÇÕES‑PROBLEMA (INTERPRETAÇÃO)</div>
+    
     <div class="colunas">
-        <!-- Coluna esquerda (questões 5 e 6) -->
+        <!-- Coluna esquerda -->
         <div class="item-coluna">
-            <!-- Questão 5 - Problema com compras em reais (adição/subtração) -->
+            <!-- Questão 5 - Salário (frações) -->
             <div class="questao">
-                <p><strong>5)</strong> João foi à papelaria com R$ 50,00. Comprou um caderno por R$ 22,90 e uma caneta por R$ 3,75. Quanto sobrou de troco?</p>
+                <p>5) <strong>O orçamento de João</strong><br>
+                João recebeu seu salário integral no início do mês. Ele gastou <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> dessa quantia com o aluguel da casa e <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> do salário com alimentação e transporte. Considerando apenas essas duas despesas, que fração do salário de João foi gasta ao todo?</p>
                 <div class="linha-resposta"></div>
-                <div class="linha-resposta-curta" style="width: 90%; margin-left: 0;"></div>
             </div>
 
-            <!-- Questão 6 - Problema com fração de um valor em reais -->
+            <!-- Questão 6 - Temperatura (decimais adição) -->
             <div class="questao">
-                <p><strong>6)</strong> Um celular custa R$ 800,00. Pedro pagou <span class="fracao"><span class="numerador">1</span><span class="denominador">4</span></span> do valor como entrada e o restante vai parcelar.</p>
-                <p>a) Qual o valor pago na entrada? <span class="linha-resposta-curta"></span></p>
-                <p>b) Quanto ainda falta pagar? <span class="linha-resposta-curta"></span></p>
+                <p>6) <strong>Onda de calor na serra</strong><br>
+                Em uma pequena cidade serrana, os termômetros registraram 12,4 °C pela manhã. Durante a tarde, uma forte onda de calor fez a temperatura subir 5,8 °C. Com essa elevação, qual foi a temperatura máxima atingida naquela tarde?</p>
+                <div class="linha-resposta"></div>
             </div>
         </div>
 
-        <!-- Coluna direita (questões 7 e 8) -->
+        <!-- Coluna direita -->
         <div class="item-coluna">
-            <!-- Questão 7 - Problema com fração e decimal (comida) -->
+            <!-- Questão 7 - Troco na papelaria (decimais subtração) -->
             <div class="questao">
-                <p><strong>7)</strong> Uma torta pesa 1,5 kg. João comeu 0,3 kg e Maria comeu <span class="fracao"><span class="numerador">1</span><span class="denominador">4</span></span> kg. Quantos quilos de torta sobraram? (resposta em decimal)</p>
+                <p>7) <strong>Compra na papelaria</strong><br>
+                Ana foi à papelaria com R$ 50,00 na carteira para comprar materiais escolares. Ela escolheu um caderno que custava R$ 22,90 e uma caneta especial de R$ 3,75. Após pagar pelos dois produtos, quanto restou de troco para Ana?</p>
                 <div class="linha-resposta"></div>
-                <div class="linha-resposta-curta" style="width: 90%; margin-left: 0;"></div>
             </div>
 
-            <!-- Questão 8 - Problema com duas operações (fração e depois decimal) -->
+            <!-- Questão 8 - Percurso do Gustavo (frações soma) -->
             <div class="questao">
-                <p><strong>8)</strong> Ana tinha R$ 120,50. Gastou <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> desse valor em roupas e depois mais R$ 25,80 em um lanche. Quanto sobrou?</p>
+                <p>8) <strong>Viagem complicada de Gustavo</strong><br>
+                Gustavo precisa sair de sua casa e ir até a casa de sua tia, que mora no interior. Ele percorreu <span class="fracao"><span class="numerador">5</span><span class="denominador">9</span></span> de todo o trajeto com seu carro. Por causa de um engarrafamento, ele decidiu continuar, mas teve que andar mais <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> do percurso total de bicicleta, até que o pneu furou. Considerando apenas essas duas etapas (carro e bicicleta), que fração do percurso total Gustavo já conseguiu percorrer?</p>
                 <div class="linha-resposta"></div>
-                <div class="linha-resposta-curta" style="width: 90%; margin-left: 0;"></div>
-                <p style="margin-top: 8px; font-size: 0.8rem;">(Dica: calcule primeiro quanto foi gasto em roupas, depois some com o lanche e subtraia do total.)</p>
             </div>
         </div>
     </div>
 
-    <!-- Espaço extra para cálculos -->
-    <div style="margin-top: 30px;">
-        <div style="border-top: 2px dotted #2c3e50; padding-top: 8px; font-weight: bold;">✍️ Espaço para os cálculos (use o verso se necessário):</div>
-        <div style="height: 100px; border-bottom: 1px solid #ccc; margin-top: 5px;"></div>
-        <div style="height: 100px; border-bottom: 1px solid #ccc; margin-top: 10px;"></div>
+    <!-- ESPAÇO PARA CÁLCULOS -->
+    <div class="espaco-calculos">
+        <div style="font-weight: bold; margin-bottom: 10px;">✍️ DESENVOLVA AQUI SEUS CÁLCULOS (use o verso se necessário):</div>
+        <div class="calc-linha"></div>
+        <div class="calc-linha"></div>
+        <div class="calc-linha"></div>
+        <div style="font-size: 0.8rem; color: #555;">Indique claramente o número da questão ao lado de cada cálculo.</div>
     </div>
 
-    <!-- Rodapé -->
-    <div style="margin-top: 25px; border-top: 1px solid #ccc; padding-top: 8px; font-size: 12px; text-align: center;">
-        <strong>Instruções finais:</strong> Apresente todos os cálculos de forma organizada. Respostas sem justificativa não serão consideradas. <br>
-        Nas dízimas periódicas, use a notação de barra (ex: 0,<span style="text-decoration:overline">3</span>). Frações sempre devem ser simplificadas.
-    </div>
-
-</div> <!-- fim prova -->
-
+    <footer>
+        <strong>Instruções finais:</strong> Revise suas respostas. Frações devem estar na forma irredutível. Decimais com até 3 casas, se necessário. Dízimas periódicas podem ser representadas com barra (ex: 0,<span style="text-decoration: overline;">3</span>).<br>
+        <em>Boa prova!</em>
+    </footer>
+</div>
 </body>
 </html>
