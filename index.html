@@ -9,15 +9,16 @@
     }
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 15px 20px;
+        margin: 0;
+        padding: 15px;
         background-color: #eef2f5;
-        font-size: 15px;
+        font-size: 14pt; /* Base maior para impressão */
     }
     .prova {
         max-width: 1100px;
         margin: 0 auto;
         background: white;
-        padding: 20px 25px;
+        padding: 15px 20px;
         border-radius: 12px;
         box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     }
@@ -35,25 +36,11 @@
         height: auto;
     }
     .nome-colegio {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-weight: bold;
         text-align: center;
         line-height: 1.3;
         color: #1e466e;
-    }
-    .info-simples {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        background: #f0f4f8;
-        padding: 8px 15px;
-        border-radius: 6px;
-        margin: 12px 0;
-        font-size: 0.95rem;
-        flex-wrap: wrap;
-    }
-    .info-simples span {
-        font-weight: bold;
     }
     .linha-nome-turma {
         display: flex;
@@ -64,23 +51,25 @@
         border: 1px solid #ccc;
         border-radius: 5px;
         margin: 15px 0;
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
     .campo {
         flex: 1;
         border-bottom: 1px solid #333;
         margin-left: 8px;
-        height: 22px;
+        height: 26px;
     }
     .colunas {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
         gap: 30px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+    .item-coluna {
+        flex: 1;
     }
     .questao {
-        margin-bottom: 28px;
+        margin-bottom: 25px;
         page-break-inside: avoid;
         break-inside: avoid;
     }
@@ -103,16 +92,17 @@
     }
     .linha-resposta {
         border-bottom: 1px dashed #666;
-        margin: 5px 0 8px 0;
+        margin: 5px 0 12px 0;
         width: 100%;
-        height: 28px;
+        height: 32px;
     }
     .linha-resposta-curta {
         border-bottom: 1px dashed #666;
         display: inline-block;
-        width: 120px;
+        width: 130px;
         margin-left: 10px;
         vertical-align: middle;
+        height: 24px;
     }
     .fracao {
         display: inline-block;
@@ -130,21 +120,60 @@
         display: block;
         padding: 0 4px;
     }
+
+    /* ========== REGRAS ESPECÍFICAS PARA IMPRESSÃO ========== */
     @media print {
         body {
             margin: 0;
             padding: 0;
             background: white;
+            font-size: 12pt;
         }
         .prova {
+            max-width: 100%;
+            margin: 0;
+            padding: 0.5cm;
             box-shadow: none;
-            padding: 15px;
+            border-radius: 0;
+            background: white;
         }
-        .linha-resposta, .linha-resposta-curta {
-            border-bottom: 1px solid black;
+        .cabecalho-colegio {
+            border-bottom: 2px solid black;
         }
         .linha-nome-turma {
             border: 1px solid black;
+            background: none;
+            padding: 5px 8px;
+            margin: 10px 0;
+        }
+        .campo {
+            border-bottom: 1px solid black;
+            height: 24px;
+        }
+        .colunas {
+            display: flex;
+            gap: 0.8cm;
+            width: 100%;
+        }
+        .item-coluna {
+            width: 48%;
+        }
+        .questao p {
+            background: none;
+            padding: 0;
+            margin-top: 0;
+        }
+        .linha-resposta, .linha-resposta-curta {
+            border-bottom: 1px solid black;
+            height: 28px;
+            page-break-inside: avoid;
+        }
+        .fracao .numerador {
+            border-bottom: 1px solid black;
+        }
+        /* Evita quebras feias dentro das questões */
+        .questao, .subquestao-item {
+            page-break-inside: avoid;
         }
     }
 </style>
@@ -247,7 +276,6 @@
             </div>
         </div>
     </div>
-
 </div>
 </body>
 </html>
