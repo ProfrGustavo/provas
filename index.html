@@ -83,16 +83,6 @@
         margin-top: -10px;
         margin-bottom: 15px;
     }
-    .parte-titulo {
-        background-color: #d9e6f5;
-        padding: 8px 15px;
-        margin: 25px 0 15px 0;
-        border-left: 8px solid #1e466e;
-        font-weight: bold;
-        font-size: 1.2rem;
-        color: #1e466e;
-        border-radius: 0 8px 8px 0;
-    }
     .colunas {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -183,11 +173,6 @@
             border-bottom: 1px solid black;
         }
     }
-    .destaque {
-        background: #fef5e7;
-        padding: 6px;
-        border-radius: 6px;
-    }
 </style>
 </head>
 <body>
@@ -209,10 +194,9 @@
     </div>
     <div class="aviso">📌 Atenção: Apresente todos os cálculos de forma clara e organizada no espaço indicado ou no verso. Respostas sem justificativa perderão pontos.</div>
 
-    <!-- ==================== PARTE 1 - OPERAÇÕES ==================== -->
-
+    <!-- Colunas com todas as questões -->
     <div class="colunas">
-        <!-- Coluna da esquerda -->
+        <!-- Coluna esquerda (questões 1, 2, 5, 6) -->
         <div class="item-coluna">
             <!-- Questão 1 - Frações -->
             <div class="questao">
@@ -234,9 +218,21 @@
                     <div class="subquestao-item">c) 5,632 + 0,98 = <span class="linha-resposta-curta"></span></div>
                 </div>
             </div>
+
+            <!-- Questão 5 - Salário (frações) -->
+            <div class="questao">
+                <p>5) João recebeu seu salário integral no início do mês. Ele gastou <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> dessa quantia com o aluguel da casa e <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> do salário com alimentação e transporte. Considerando apenas essas duas despesas, que fração do salário de João foi gasta ao todo?</p>
+                <div class="linha-resposta"></div>
+            </div>
+
+            <!-- Questão 6 - Temperatura (decimais adição) -->
+            <div class="questao">
+                <p>6) Em uma pequena cidade serrana, os termômetros registraram 12,4 °C pela manhã. Durante a tarde, uma forte onda de calor fez a temperatura subir 5,8 °C. Com essa elevação, qual foi a temperatura máxima atingida naquela tarde?</p>
+                <div class="linha-resposta"></div>
+            </div>
         </div>
 
-        <!-- Coluna da direita -->
+        <!-- Coluna direita (questões 3, 4, 7, 8) -->
         <div class="item-coluna">
             <!-- Questão 3 - Decimais para fração -->
             <div class="questao">
@@ -244,8 +240,8 @@
                 <div class="subquestao">
                     <div class="subquestao-item">a) 0,45 = <span class="linha-resposta-curta"></span></div>
                     <div class="subquestao-item">b) 2,044 = <span class="linha-resposta-curta"></span></div>
-                    <div class="subquestao-item">c) 0,212121... 
-                    <div class="subquestao-item">d) 0,123123123... 
+                    <div class="subquestao-item">c) 0,212121... = <span class="linha-resposta-curta"></span></div>
+                    <div class="subquestao-item">d) 0,123123123... = <span class="linha-resposta-curta"></span></div>
                 </div>
             </div>
 
@@ -258,45 +254,34 @@
                     <div class="subquestao-item">c) <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> - 0,15 = (resposta em fração) <span class="linha-resposta-curta"></span></div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- ==================== PARTE 2 - PROBLEMAS CONTEXTUAIS ==================== -->
-    
-    <div class="colunas">
-        <!-- Coluna esquerda -->
-        <div class="item-coluna">
-            <!-- Questão 5 - Salário (frações) -->
+            <!-- Questão 7 - Troco na papelaria -->
             <div class="questao">
-                João recebeu seu salário integral no início do mês. Ele gastou <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> dessa quantia com o aluguel da casa e <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> do salário com alimentação e transporte. Considerando apenas essas duas despesas, que fração do salário de João foi gasta ao todo?</p>
+                <p>7) Ana foi à papelaria com R$ 50,00 na carteira para comprar materiais escolares. Ela escolheu um caderno que custava R$ 22,90 e uma caneta especial de R$ 3,75. Após pagar pelos dois produtos, quanto restou de troco para Ana?</p>
                 <div class="linha-resposta"></div>
             </div>
 
-            <!-- Questão 6 - Temperatura (decimais adição) -->
+            <!-- Questão 8 - Percurso do Gustavo -->
             <div class="questao">
-                Em uma pequena cidade serrana, os termômetros registraram 12,4 °C pela manhã. Durante a tarde, uma forte onda de calor fez a temperatura subir 5,8 °C. Com essa elevação, qual foi a temperatura máxima atingida naquela tarde?</p>
-                <div class="linha-resposta"></div>
-            </div>
-        </div>
-
-        <!-- Coluna direita -->
-        <div class="item-coluna">
-            <!-- Questão 7 - Troco na papelaria (decimais subtração) -->
-            <div class="questao">
-                Ana foi à papelaria com R$ 50,00 na carteira para comprar materiais escolares. Ela escolheu um caderno que custava R$ 22,90 e uma caneta especial de R$ 3,75. Após pagar pelos dois produtos, quanto restou de troco para Ana?</p>
-                <div class="linha-resposta"></div>
-            </div>
-
-            <!-- Questão 8 - Percurso do Gustavo (frações soma) -->
-            <div class="questao">
-                Gustavo precisa sair de sua casa e ir até a casa de sua tia, que mora no interior. Ele percorreu <span class="fracao"><span class="numerador">5</span><span class="denominador">9</span></span> de todo o trajeto com seu carro. Por causa de um engarrafamento, ele decidiu continuar, mas teve que andar mais <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> do percurso total de bicicleta, até que o pneu furou. Considerando apenas essas duas etapas (carro e bicicleta), que fração do percurso total Gustavo já conseguiu percorrer?</p>
+                <p>8) Gustavo precisa sair de sua casa e ir até a casa de sua tia, que mora no interior. Ele percorreu <span class="fracao"><span class="numerador">5</span><span class="denominador">9</span></span> de todo o trajeto com seu carro. Por causa de um engarrafamento, ele decidiu continuar, mas teve que andar mais <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> do percurso total de bicicleta, até que o pneu furou. Considerando apenas essas duas etapas (carro e bicicleta), que fração do percurso total Gustavo já conseguiu percorrer?</p>
                 <div class="linha-resposta"></div>
             </div>
         </div>
     </div>
 
+    <!-- Espaço para cálculos -->
+    <div class="espaco-calculos">
+        <div style="font-weight: bold; margin-bottom: 10px;">✍️ DESENVOLVA AQUI SEUS CÁLCULOS (use o verso se necessário):</div>
+        <div class="calc-linha"></div>
+        <div class="calc-linha"></div>
+        <div class="calc-linha"></div>
+        <div style="font-size: 0.8rem; color: #555;">Indique claramente o número da questão ao lado de cada cálculo.</div>
+    </div>
 
-
+    <footer>
+        <strong>Instruções finais:</strong> Revise suas respostas. Frações devem estar na forma irredutível. Decimais com até 3 casas, se necessário. Dízimas periódicas podem ser representadas com barra (ex: 0,<span style="text-decoration: overline;">3</span>).<br>
+        <em>Boa prova!</em>
+    </footer>
 </div>
 </body>
 </html>
