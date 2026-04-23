@@ -10,15 +10,16 @@
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
-        padding: 15px;
+        padding: 12px;
         background-color: #eef2f5;
-        font-size: 14pt; /* Base maior para impressão */
+        font-size: 16pt;  /* Aumentado de 14pt para 16pt */
+        line-height: 1.5;  /* Espaçamento entre linhas */
     }
     .prova {
         max-width: 1100px;
         margin: 0 auto;
         background: white;
-        padding: 15px 20px;
+        padding: 20px 25px;
         border-radius: 12px;
         box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     }
@@ -27,112 +28,113 @@
         align-items: center;
         justify-content: center;
         gap: 15px;
-        margin-bottom: 10px;
-        padding-bottom: 5px;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
         border-bottom: 3px solid #1e466e;
     }
     .logo-colegio img {
-        width: 70px;
+        width: 80px;  /* levemente maior */
         height: auto;
     }
     .nome-colegio {
-        font-size: 1.2rem;
+        font-size: 1.4rem;  /* maior */
         font-weight: bold;
         text-align: center;
-        line-height: 1.3;
+        line-height: 1.4;
         color: #1e466e;
     }
     .linha-nome-turma {
         display: flex;
         justify-content: space-between;
-        gap: 15px;
+        gap: 20px;
         background: #fafafa;
-        padding: 8px 12px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin: 15px 0;
-        font-size: 1rem;
+        padding: 12px 15px;
+        border: 1px solid #aaa;
+        border-radius: 6px;
+        margin: 20px 0;
+        font-size: 1.2rem;
     }
     .campo {
         flex: 1;
         border-bottom: 1px solid #333;
-        margin-left: 8px;
-        height: 26px;
+        margin-left: 10px;
+        height: 32px;  /* mais alto */
     }
     .colunas {
         display: flex;
-        gap: 30px;
+        gap: 35px;
         justify-content: space-between;
-        margin: 10px 0;
+        margin: 15px 0;
     }
     .item-coluna {
         flex: 1;
     }
     .questao {
-        margin-bottom: 25px;
+        margin-bottom: 32px;  /* mais espaço entre questões */
         page-break-inside: avoid;
         break-inside: avoid;
     }
     .questao p {
         font-weight: bold;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         background: #f9f9f9;
-        padding: 5px;
+        padding: 8px;
         border-radius: 6px;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     .subquestao {
-        margin-left: 20px;
-        margin-top: 6px;
-        margin-bottom: 10px;
+        margin-left: 25px;
+        margin-top: 8px;
+        margin-bottom: 12px;
     }
     .subquestao-item {
-        margin: 8px 0;
-        font-size: 0.95rem;
+        margin: 12px 0;  /* mais espaço vertical */
+        font-size: 1rem;
     }
     .linha-resposta {
         border-bottom: 1px dashed #666;
-        margin: 5px 0 12px 0;
+        margin: 8px 0 15px 0;
         width: 100%;
-        height: 32px;
+        height: 38px;  /* maior */
     }
     .linha-resposta-curta {
         border-bottom: 1px dashed #666;
         display: inline-block;
-        width: 130px;
-        margin-left: 10px;
+        width: 150px;
+        margin-left: 12px;
         vertical-align: middle;
-        height: 24px;
+        height: 30px;
     }
     .fracao {
         display: inline-block;
         text-align: center;
         vertical-align: middle;
-        margin: 0 2px;
-        font-size: 1em;
+        margin: 0 3px;
+        font-size: 1.05em;
     }
     .fracao .numerador {
         display: block;
         border-bottom: 1px solid black;
-        padding: 0 4px;
+        padding: 0 5px;
     }
     .fracao .denominador {
         display: block;
-        padding: 0 4px;
+        padding: 0 5px;
     }
 
-    /* ========== REGRAS ESPECÍFICAS PARA IMPRESSÃO ========== */
+    /* ========== IMPRESSÃO ========== */
     @media print {
         body {
             margin: 0;
             padding: 0;
             background: white;
-            font-size: 12pt;
+            font-size: 14pt;  /* impressão um pouco menor que tela, mas ainda grande */
+            line-height: 1.4;
         }
         .prova {
             max-width: 100%;
             margin: 0;
-            padding: 0.5cm;
+            padding: 0.6cm;
             box-shadow: none;
             border-radius: 0;
             background: white;
@@ -143,12 +145,12 @@
         .linha-nome-turma {
             border: 1px solid black;
             background: none;
-            padding: 5px 8px;
-            margin: 10px 0;
+            padding: 8px 12px;
+            margin: 15px 0;
         }
         .campo {
             border-bottom: 1px solid black;
-            height: 24px;
+            height: 30px;
         }
         .colunas {
             display: flex;
@@ -161,17 +163,16 @@
         .questao p {
             background: none;
             padding: 0;
-            margin-top: 0;
+            margin-top: 5px;
         }
         .linha-resposta, .linha-resposta-curta {
             border-bottom: 1px solid black;
-            height: 28px;
+            height: 34px;
             page-break-inside: avoid;
         }
         .fracao .numerador {
             border-bottom: 1px solid black;
         }
-        /* Evita quebras feias dentro das questões */
         .questao, .subquestao-item {
             page-break-inside: avoid;
         }
@@ -193,9 +194,9 @@
 
     <!-- PRIMEIRO CABEÇALHO (uma linha) -->
     <div class="linha-nome-turma">
-        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Nome:</strong> <div class="campo"></div></div>
-        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Turma:</strong> <div class="campo"></div></div>
-        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Data:</strong> <div class="campo"></div></div>
+        <div style="display: flex; align-items: baseline; gap: 8px; flex: 1;"><strong>Nome:</strong> <div class="campo"></div></div>
+        <div style="display: flex; align-items: baseline; gap: 8px; flex: 1;"><strong>Turma:</strong> <div class="campo"></div></div>
+        <div style="display: flex; align-items: baseline; gap: 8px; flex: 1;"><strong>Data:</strong> <div class="campo"></div></div>
     </div>
 
     <!-- ==================== QUESTÕES 1 A 4 ==================== -->
@@ -245,9 +246,9 @@
 
     <!-- SEGUNDO CABEÇALHO (uma linha) - separador entre parte 1 e parte 2 -->
     <div class="linha-nome-turma">
-        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Nome:</strong> <div class="campo"></div></div>
-        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Turma:</strong> <div class="campo"></div></div>
-        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Data:</strong> <div class="campo"></div></div>
+        <div style="display: flex; align-items: baseline; gap: 8px; flex: 1;"><strong>Nome:</strong> <div class="campo"></div></div>
+        <div style="display: flex; align-items: baseline; gap: 8px; flex: 1;"><strong>Turma:</strong> <div class="campo"></div></div>
+        <div style="display: flex; align-items: baseline; gap: 8px; flex: 1;"><strong>Data:</strong> <div class="campo"></div></div>
     </div>
 
     <!-- ==================== QUESTÕES 5 A 8 ==================== -->
