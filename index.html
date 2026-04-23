@@ -9,14 +9,15 @@
     }
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 20px;
+        margin: 15px 20px;
         background-color: #eef2f5;
+        font-size: 15px;
     }
     .prova {
         max-width: 1100px;
         margin: 0 auto;
         background: white;
-        padding: 25px;
+        padding: 20px 25px;
         border-radius: 12px;
         box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     }
@@ -25,20 +26,13 @@
         align-items: center;
         justify-content: center;
         gap: 15px;
-        margin-bottom: 20px;
-        padding-bottom: 10px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
         border-bottom: 3px solid #1e466e;
     }
-    .logo-colegio {
+    .logo-colegio img {
         width: 70px;
-        height: 70px;
-        background: #1e466e;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        font-size: 32px;
+        height: auto;
     }
     .nome-colegio {
         font-size: 1.1rem;
@@ -47,47 +41,43 @@
         line-height: 1.3;
         color: #1e466e;
     }
-    h1 {
-        text-align: center;
-        margin: 0;
-        font-size: 1.8rem;
-        color: #2c3e50;
-    }
-    .subtitulo {
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 5px;
-        margin-bottom: 20px;
-        font-weight: normal;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 8px;
-    }
-    .info-aluno {
+    .info-simples {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 15px;
+        gap: 20px;
         background: #f0f4f8;
-        padding: 10px 15px;
-        border-radius: 8px;
-        margin: 15px 0;
-        font-size: 0.9rem;
+        padding: 8px 15px;
+        border-radius: 6px;
+        margin: 12px 0;
+        font-size: 0.95rem;
+        flex-wrap: wrap;
     }
-    .info-aluno span {
+    .info-simples span {
         font-weight: bold;
     }
-    .aviso {
-        text-align: right;
-        font-size: 0.75rem;
-        color: #c0392b;
-        margin-top: -10px;
-        margin-bottom: 15px;
+    .linha-nome-turma {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        background: #fafafa;
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 15px 0;
+        font-size: 0.95rem;
+    }
+    .campo {
+        flex: 1;
+        border-bottom: 1px solid #333;
+        margin-left: 8px;
+        height: 22px;
     }
     .colunas {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
         margin-top: 10px;
+        margin-bottom: 10px;
     }
     .questao {
         margin-bottom: 28px;
@@ -100,6 +90,7 @@
         background: #f9f9f9;
         padding: 5px;
         border-radius: 6px;
+        font-size: 1rem;
     }
     .subquestao {
         margin-left: 20px;
@@ -108,17 +99,18 @@
     }
     .subquestao-item {
         margin: 8px 0;
+        font-size: 0.95rem;
     }
     .linha-resposta {
         border-bottom: 1px dashed #666;
         margin: 5px 0 8px 0;
         width: 100%;
-        height: 24px;
+        height: 28px;
     }
     .linha-resposta-curta {
         border-bottom: 1px dashed #666;
         display: inline-block;
-        width: 100px;
+        width: 120px;
         margin-left: 10px;
         vertical-align: middle;
     }
@@ -138,24 +130,6 @@
         display: block;
         padding: 0 4px;
     }
-    .espaco-calculos {
-        margin-top: 35px;
-        border-top: 2px dotted #2c3e50;
-        padding-top: 15px;
-    }
-    .calc-linha {
-        height: 80px;
-        border-bottom: 1px solid #ccc;
-        margin: 15px 0;
-    }
-    footer {
-        margin-top: 25px;
-        font-size: 0.7rem;
-        text-align: center;
-        color: #555;
-        border-top: 1px solid #ccc;
-        padding-top: 12px;
-    }
     @media print {
         body {
             margin: 0;
@@ -166,39 +140,39 @@
             box-shadow: none;
             padding: 15px;
         }
-        .aviso {
-            color: black;
-        }
         .linha-resposta, .linha-resposta-curta {
             border-bottom: 1px solid black;
+        }
+        .linha-nome-turma {
+            border: 1px solid black;
         }
     }
 </style>
 </head>
 <body>
 <div class="prova">
+    <!-- Cabeçalho com imagem -->
     <div class="cabecalho-colegio">
-        <div class="logo-colegio">📐</div>
+        <div class="logo-colegio">
+            <img src="logo.jpg" alt="Logo">
+        </div>
         <div class="nome-colegio">
             COLÉGIO ESTADUAL ROCHA POMBO<br>
             ENSINO FUNDAMENTAL, MÉDIO, NORMAL E PROFISSIONAL
         </div>
     </div>
-    <h1>AVALIAÇÃO DE MATEMÁTICA</h1>
-    <div class="subtitulo">Frações, Decimais e Situações‑Problema</div>
 
-    <div class="info-aluno">
-        <span>Nome: _________________________________________________</span>
-        <span>Turma: ________</span>
-        <span>Data: ___/___/______</span>
+    <!-- PRIMEIRO CABEÇALHO (uma linha) -->
+    <div class="linha-nome-turma">
+        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Nome:</strong> <div class="campo"></div></div>
+        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Turma:</strong> <div class="campo"></div></div>
+        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Data:</strong> <div class="campo"></div></div>
     </div>
-    <div class="aviso">📌 Atenção: Apresente todos os cálculos de forma clara e organizada no espaço indicado ou no verso. Respostas sem justificativa perderão pontos.</div>
 
-    <!-- Colunas com todas as questões -->
+    <!-- ==================== QUESTÕES 1 A 4 ==================== -->
     <div class="colunas">
-        <!-- Coluna esquerda (questões 1, 2, 5, 6) -->
+        <!-- Coluna esquerda: questões 1 e 2 -->
         <div class="item-coluna">
-            <!-- Questão 1 - Frações -->
             <div class="questao">
                 <p>1) Efetue as operações com frações e dê a resposta na forma irredutível (simplificada):</p>
                 <div class="subquestao">
@@ -208,8 +182,6 @@
                     <div class="subquestao-item">d) <span class="fracao"><span class="numerador">3</span><span class="denominador">4</span></span> - <span class="fracao"><span class="numerador">1</span><span class="denominador">6</span></span> = <span class="linha-resposta-curta"></span></div>
                 </div>
             </div>
-
-            <!-- Questão 2 - Decimais -->
             <div class="questao">
                 <p>2) Resolva as operações com números decimais:</p>
                 <div class="subquestao">
@@ -218,23 +190,10 @@
                     <div class="subquestao-item">c) 5,632 + 0,98 = <span class="linha-resposta-curta"></span></div>
                 </div>
             </div>
-
-            <!-- Questão 5 - Salário (frações) -->
-            <div class="questao">
-                <p>5) João recebeu seu salário integral no início do mês. Ele gastou <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> dessa quantia com o aluguel da casa e <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> do salário com alimentação e transporte. Considerando apenas essas duas despesas, que fração do salário de João foi gasta ao todo?</p>
-                <div class="linha-resposta"></div>
-            </div>
-
-            <!-- Questão 6 - Temperatura (decimais adição) -->
-            <div class="questao">
-                <p>6) Em uma pequena cidade serrana, os termômetros registraram 12,4 °C pela manhã. Durante a tarde, uma forte onda de calor fez a temperatura subir 5,8 °C. Com essa elevação, qual foi a temperatura máxima atingida naquela tarde?</p>
-                <div class="linha-resposta"></div>
-            </div>
         </div>
 
-        <!-- Coluna direita (questões 3, 4, 7, 8) -->
+        <!-- Coluna direita: questões 3 e 4 -->
         <div class="item-coluna">
-            <!-- Questão 3 - Decimais para fração -->
             <div class="questao">
                 <p>3) Converta os números decimais abaixo em frações. Simplifique sempre que possível:</p>
                 <div class="subquestao">
@@ -244,8 +203,6 @@
                     <div class="subquestao-item">d) 0,123123123... = <span class="linha-resposta-curta"></span></div>
                 </div>
             </div>
-
-            <!-- Questão 4 - Mistas -->
             <div class="questao">
                 <p>4) Resolva as operações mistas, atentando para o formato pedido:</p>
                 <div class="subquestao">
@@ -254,14 +211,36 @@
                     <div class="subquestao-item">c) <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> - 0,15 = (resposta em fração) <span class="linha-resposta-curta"></span></div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Questão 7 - Troco na papelaria -->
+    <!-- SEGUNDO CABEÇALHO (uma linha) - separador entre parte 1 e parte 2 -->
+    <div class="linha-nome-turma">
+        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Nome:</strong> <div class="campo"></div></div>
+        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Turma:</strong> <div class="campo"></div></div>
+        <div style="display: flex; align-items: baseline; gap: 5px; flex: 1;"><strong>Data:</strong> <div class="campo"></div></div>
+    </div>
+
+    <!-- ==================== QUESTÕES 5 A 8 ==================== -->
+    <div class="colunas">
+        <!-- Coluna esquerda: questões 5 e 6 -->
+        <div class="item-coluna">
+            <div class="questao">
+                <p>5) João recebeu seu salário integral no início do mês. Ele gastou <span class="fracao"><span class="numerador">2</span><span class="denominador">5</span></span> dessa quantia com o aluguel da casa e <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> do salário com alimentação e transporte. Considerando apenas essas duas despesas, que fração do salário de João foi gasta ao todo?</p>
+                <div class="linha-resposta"></div>
+            </div>
+            <div class="questao">
+                <p>6) Em uma pequena cidade serrana, os termômetros registraram 12,4 °C pela manhã. Durante a tarde, uma forte onda de calor fez a temperatura subir 5,8 °C. Com essa elevação, qual foi a temperatura máxima atingida naquela tarde?</p>
+                <div class="linha-resposta"></div>
+            </div>
+        </div>
+
+        <!-- Coluna direita: questões 7 e 8 -->
+        <div class="item-coluna">
             <div class="questao">
                 <p>7) Ana foi à papelaria com R$ 50,00 na carteira para comprar materiais escolares. Ela escolheu um caderno que custava R$ 22,90 e uma caneta especial de R$ 3,75. Após pagar pelos dois produtos, quanto restou de troco para Ana?</p>
                 <div class="linha-resposta"></div>
             </div>
-
-            <!-- Questão 8 - Percurso do Gustavo -->
             <div class="questao">
                 <p>8) Gustavo precisa sair de sua casa e ir até a casa de sua tia, que mora no interior. Ele percorreu <span class="fracao"><span class="numerador">5</span><span class="denominador">9</span></span> de todo o trajeto com seu carro. Por causa de um engarrafamento, ele decidiu continuar, mas teve que andar mais <span class="fracao"><span class="numerador">1</span><span class="denominador">3</span></span> do percurso total de bicicleta, até que o pneu furou. Considerando apenas essas duas etapas (carro e bicicleta), que fração do percurso total Gustavo já conseguiu percorrer?</p>
                 <div class="linha-resposta"></div>
@@ -269,19 +248,6 @@
         </div>
     </div>
 
-    <!-- Espaço para cálculos -->
-    <div class="espaco-calculos">
-        <div style="font-weight: bold; margin-bottom: 10px;">✍️ DESENVOLVA AQUI SEUS CÁLCULOS (use o verso se necessário):</div>
-        <div class="calc-linha"></div>
-        <div class="calc-linha"></div>
-        <div class="calc-linha"></div>
-        <div style="font-size: 0.8rem; color: #555;">Indique claramente o número da questão ao lado de cada cálculo.</div>
-    </div>
-
-    <footer>
-        <strong>Instruções finais:</strong> Revise suas respostas. Frações devem estar na forma irredutível. Decimais com até 3 casas, se necessário. Dízimas periódicas podem ser representadas com barra (ex: 0,<span style="text-decoration: overline;">3</span>).<br>
-        <em>Boa prova!</em>
-    </footer>
 </div>
 </body>
 </html>
